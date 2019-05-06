@@ -1,0 +1,30 @@
+K‰ytt‰j‰->Selain:
+note left of Selain
+K‰ytt‰j‰ kirjoittaa selaimen osoiteriville https://fullstack-exampleapp.herokuapp.com/spa ja painaa Enter-painiketta.
+end note
+
+Selain->Palvelin: GET https://fullstack-exampleapp.herokuapp.com/spa
+note left of Palvelin
+Muodostetaan HTML
+end note
+Palvelin->Selain: status 200, sivun HTML-koodi, ilman listaa muistiinpanoista
+
+
+
+Selain->Palvelin: GET https://fullstack-exampleapp.herokuapp.com/main.css
+Palvelin-> Selain: status 200, sivun CSS-tyylitiedosto
+
+Selain->Palvelin: GET https://fullstack-exampleapp.herokuapp.com/spa.js
+Palvelin-> Selain: status 200, JavaScript-koodi
+
+note left of Selain
+Selain lataa script-tagin sis‰lt‰m‰n Javascriptin ja suorittaa koodin
+end note
+
+Selain->Palvelin: GET https://fullstack-exampleapp.herokuapp.com/data.json
+Palvelin-> Selain: status 200, JSON-muotoinen muistiinpanodata palvelimelta
+
+note left of Selain
+ Selain n‰ytt‰‰ palvelimen palauttaman HTML-sivun
+ jossa on otsikko "Muistiinpanot" sek‰ Javascript-koodilla ladattu lista muistiinpanoista.
+end note

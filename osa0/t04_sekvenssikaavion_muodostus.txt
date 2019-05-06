@@ -1,0 +1,42 @@
+K‰ytt‰j‰->Selain:
+note left of Selain
+K‰ytt‰j‰ kirjoittaa tekstikentt‰‰n "Uusi muistiinpano" ja painaa Talleta-painiketta.
+end note
+
+note right of Selain
+Selain l‰hett‰‰ lomakkeelle syˆtetyn datan palvelimelle.
+end note
+
+Selain->Palvelin: POST https://fullstack-exampleapp.herokuapp.com/new_note
+note left of Palvelin
+Palvelin kehottaa selainta tekem‰‰n automaattisesti uuden HTTP GET -pyynnˆn osoitteeseen notes.
+POST-pyynnˆst‰ huolehtiva palvelimen koodi luo uutta muistiinpanoa vastaavan olion ja laittaa sen muistiinpanot sis‰lt‰v‰‰n taulukkoon nimelt‰‰n notes.
+end note
+Palvelin->Selain: status 302, redirect Location: https://fullstack-exampleapp.herokuapp.com/notes
+
+note right of Selain
+
+Selain lataa uudelleen muistiinpanojen sivun.
+end note
+
+
+Selain->Palvelin: GET https://fullstack-exampleapp.herokuapp.com/notes
+Palvelin->Selain: status 200, html-sivu ilman listaa
+
+Selain->Palvelin: GET https://fullstack-exampleapp.herokuapp.com/main.css
+Palvelin->Selain: status 200, sivun CSS-tyylitiedosto
+
+Selain->Palvelin: GET https://fullstack-exampleapp.herokuapp.com/main.js
+Palvelin->Selain: status 200, JavaScript-koodi
+
+note left of Selain
+Selain lataa script-tagin sis‰lt‰m‰n Javascriptin ja suorittaa koodin
+end note
+
+Selain->Palvelin: GET https://fullstack-exampleapp.herokuapp.com/data.json
+Palvelin-> Selain: status 200, JSON-muotoinen muistiinpanodata palvelimelta
+
+note left of Selain
+ Selain n‰ytt‰‰ palvelimen palauttaman HTML-sivun
+ jossa on otsikko "Muistiinpanot" sek‰ Javascript-koodilla ladattu lista muistiinpanoista lis‰ttyn‰ uudella muistiinpanolla.
+end note
