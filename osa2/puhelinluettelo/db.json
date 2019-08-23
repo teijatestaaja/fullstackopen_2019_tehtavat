@@ -1,0 +1,49 @@
+{
+  "persons": [
+    {
+      "name": "Aku Ankka",
+      "phone": "050-123 4567",
+      "id": 1
+    },
+    {
+      "name": "Iines Ankka",
+      "phone": "040-222 2222",
+      "id": 2
+    },
+    {
+      "name": "Hannu Hanhi",
+      "phone": "050-333 3333",
+      "id": 3
+    },
+    {
+      "name": "Tupu Ankka",
+      "phone": "040-444 4444",
+      "id": 4
+    },
+    {
+      "name": "Taavi Ankka",
+      "phone": "050-555 5555",
+      "id": 5
+    },
+    {
+      "name": "Touho Ankka",
+      "phone": "040-666 6666",
+      "id": 6
+    },
+    {
+      "name": "Pelle Peloton",
+      "phone": "050-777 7777",
+      "id": 7
+    },
+    {
+      "name": "Riitta Hanhi",
+      "phone": "040-888 8888",
+      "id": 8
+    },
+    {
+      "name": "Teija Testaaja",
+      "phone": "12345",
+      "id": 9
+    }
+  ]
+}
